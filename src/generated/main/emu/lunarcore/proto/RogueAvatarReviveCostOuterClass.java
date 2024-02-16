@@ -19,7 +19,7 @@ public final class RogueAvatarReviveCostOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .ItemCostList revive_cost = 6;</code>
+     * <code>optional .ItemCostList revive_cost = 14;</code>
      */
     private final ItemCostListOuterClass.ItemCostList reviveCost = ItemCostListOuterClass.ItemCostList.newInstance();
 
@@ -34,7 +34,7 @@ public final class RogueAvatarReviveCostOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList revive_cost = 6;</code>
+     * <code>optional .ItemCostList revive_cost = 14;</code>
      * @return whether the reviveCost field is set
      */
     public boolean hasReviveCost() {
@@ -42,7 +42,7 @@ public final class RogueAvatarReviveCostOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList revive_cost = 6;</code>
+     * <code>optional .ItemCostList revive_cost = 14;</code>
      * @return this
      */
     public RogueAvatarReviveCost clearReviveCost() {
@@ -52,7 +52,7 @@ public final class RogueAvatarReviveCostOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList revive_cost = 6;</code>
+     * <code>optional .ItemCostList revive_cost = 14;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -66,7 +66,7 @@ public final class RogueAvatarReviveCostOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList revive_cost = 6;</code>
+     * <code>optional .ItemCostList revive_cost = 14;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -80,7 +80,7 @@ public final class RogueAvatarReviveCostOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList revive_cost = 6;</code>
+     * <code>optional .ItemCostList revive_cost = 14;</code>
      * @param value the reviveCost to set
      * @return this
      */
@@ -150,7 +150,7 @@ public final class RogueAvatarReviveCostOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 50);
+        output.writeRawByte((byte) 114);
         output.writeMessageNoTag(reviveCost);
       }
     }
@@ -171,7 +171,7 @@ public final class RogueAvatarReviveCostOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 50: {
+          case 114: {
             // reviveCost
             input.readMessage(reviveCost);
             bitField0_ |= 0x00000001;

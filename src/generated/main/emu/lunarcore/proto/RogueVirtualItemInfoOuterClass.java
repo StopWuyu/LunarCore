@@ -19,14 +19,14 @@ public final class RogueVirtualItemInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 money = 1;</code>
-     */
-    private int money;
-
-    /**
-     * <code>optional uint32 X = 4;</code>
+     * <code>optional uint32 X = 2;</code>
      */
     private int x;
+
+    /**
+     * <code>optional uint32 money = 8;</code>
+     */
+    private int money;
 
     private RogueVirtualItemInfo() {
     }
@@ -39,62 +39,25 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 money = 1;</code>
-     * @return whether the money field is set
+     * <code>optional uint32 X = 2;</code>
+     * @return whether the x field is set
      */
-    public boolean hasMoney() {
+    public boolean hasX() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 money = 1;</code>
-     * @return this
-     */
-    public RogueVirtualItemInfo clearMoney() {
-      bitField0_ &= ~0x00000001;
-      money = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 money = 1;</code>
-     * @return the money
-     */
-    public int getMoney() {
-      return money;
-    }
-
-    /**
-     * <code>optional uint32 money = 1;</code>
-     * @param value the money to set
-     * @return this
-     */
-    public RogueVirtualItemInfo setMoney(final int value) {
-      bitField0_ |= 0x00000001;
-      money = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 X = 4;</code>
-     * @return whether the x field is set
-     */
-    public boolean hasX() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 X = 4;</code>
+     * <code>optional uint32 X = 2;</code>
      * @return this
      */
     public RogueVirtualItemInfo clearX() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       x = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 X = 4;</code>
+     * <code>optional uint32 X = 2;</code>
      * @return the x
      */
     public int getX() {
@@ -102,13 +65,50 @@ public final class RogueVirtualItemInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 X = 4;</code>
+     * <code>optional uint32 X = 2;</code>
      * @param value the x to set
      * @return this
      */
     public RogueVirtualItemInfo setX(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       x = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 money = 8;</code>
+     * @return whether the money field is set
+     */
+    public boolean hasMoney() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 money = 8;</code>
+     * @return this
+     */
+    public RogueVirtualItemInfo clearMoney() {
+      bitField0_ &= ~0x00000002;
+      money = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 money = 8;</code>
+     * @return the money
+     */
+    public int getMoney() {
+      return money;
+    }
+
+    /**
+     * <code>optional uint32 money = 8;</code>
+     * @param value the money to set
+     * @return this
+     */
+    public RogueVirtualItemInfo setMoney(final int value) {
+      bitField0_ |= 0x00000002;
+      money = value;
       return this;
     }
 
@@ -117,8 +117,8 @@ public final class RogueVirtualItemInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        money = other.money;
         x = other.x;
+        money = other.money;
       }
       return this;
     }
@@ -129,11 +129,11 @@ public final class RogueVirtualItemInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasMoney()) {
-        setMoney(other.money);
-      }
       if (other.hasX()) {
         setX(other.x);
+      }
+      if (other.hasMoney()) {
+        setMoney(other.money);
       }
       return this;
     }
@@ -145,8 +145,8 @@ public final class RogueVirtualItemInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      money = 0;
       x = 0;
+      money = 0;
       return this;
     }
 
@@ -170,19 +170,19 @@ public final class RogueVirtualItemInfoOuterClass {
       }
       RogueVirtualItemInfo other = (RogueVirtualItemInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasMoney() || money == other.money)
-        && (!hasX() || x == other.x);
+        && (!hasX() || x == other.x)
+        && (!hasMoney() || money == other.money);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
-        output.writeUInt32NoTag(money);
+        output.writeRawByte((byte) 16);
+        output.writeUInt32NoTag(x);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(x);
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(money);
       }
     }
 
@@ -190,10 +190,10 @@ public final class RogueVirtualItemInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(money);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(x);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(x);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(money);
       }
       return size;
     }
@@ -205,18 +205,18 @@ public final class RogueVirtualItemInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
-            // money
-            money = input.readUInt32();
+          case 16: {
+            // x
+            x = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 64) {
               break;
             }
           }
-          case 32: {
-            // x
-            x = input.readUInt32();
+          case 64: {
+            // money
+            money = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -241,10 +241,10 @@ public final class RogueVirtualItemInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.money, money);
+        output.writeUInt32(FieldNames.x, x);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.x, x);
+        output.writeUInt32(FieldNames.money, money);
       }
       output.endObject();
     }
@@ -256,10 +256,10 @@ public final class RogueVirtualItemInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 104079552: {
-            if (input.isAtField(FieldNames.money)) {
+          case 88: {
+            if (input.isAtField(FieldNames.x)) {
               if (!input.trySkipNullValue()) {
-                money = input.readUInt32();
+                x = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -267,10 +267,10 @@ public final class RogueVirtualItemInfoOuterClass {
             }
             break;
           }
-          case 88: {
-            if (input.isAtField(FieldNames.x)) {
+          case 104079552: {
+            if (input.isAtField(FieldNames.money)) {
               if (!input.trySkipNullValue()) {
-                x = input.readUInt32();
+                money = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -331,9 +331,9 @@ public final class RogueVirtualItemInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName money = FieldName.forField("money");
-
       static final FieldName x = FieldName.forField("X");
+
+      static final FieldName money = FieldName.forField("money");
     }
   }
 }

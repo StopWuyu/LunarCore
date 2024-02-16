@@ -20,7 +20,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 dialogue_event_id = 9;</code>
+     * <code>optional uint32 dialogue_event_id = 5;</code>
      */
     private int dialogueEventId;
 
@@ -30,12 +30,12 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>optional .RogueDialogueEvent event_data = 14;</code>
+     * <code>optional .RogueDialogueEvent event_data = 8;</code>
      */
     private final RogueDialogueEventOuterClass.RogueDialogueEvent eventData = RogueDialogueEventOuterClass.RogueDialogueEvent.newInstance();
 
     /**
-     * <code>repeated .DialogueResult dialogue_result = 6;</code>
+     * <code>repeated .DialogueResult dialogue_result = 1;</code>
      */
     private final RepeatedMessage<DialogueResultOuterClass.DialogueResult> dialogueResult = RepeatedMessage.newEmptyInstance(DialogueResultOuterClass.DialogueResult.getFactory());
 
@@ -50,7 +50,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 dialogue_event_id = 9;</code>
+     * <code>optional uint32 dialogue_event_id = 5;</code>
      * @return whether the dialogueEventId field is set
      */
     public boolean hasDialogueEventId() {
@@ -58,7 +58,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 dialogue_event_id = 9;</code>
+     * <code>optional uint32 dialogue_event_id = 5;</code>
      * @return this
      */
     public SelectRogueDialogueEventScRsp clearDialogueEventId() {
@@ -68,7 +68,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 dialogue_event_id = 9;</code>
+     * <code>optional uint32 dialogue_event_id = 5;</code>
      * @return the dialogueEventId
      */
     public int getDialogueEventId() {
@@ -76,7 +76,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 dialogue_event_id = 9;</code>
+     * <code>optional uint32 dialogue_event_id = 5;</code>
      * @param value the dialogueEventId to set
      * @return this
      */
@@ -124,7 +124,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueDialogueEvent event_data = 14;</code>
+     * <code>optional .RogueDialogueEvent event_data = 8;</code>
      * @return whether the eventData field is set
      */
     public boolean hasEventData() {
@@ -132,7 +132,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueDialogueEvent event_data = 14;</code>
+     * <code>optional .RogueDialogueEvent event_data = 8;</code>
      * @return this
      */
     public SelectRogueDialogueEventScRsp clearEventData() {
@@ -142,7 +142,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueDialogueEvent event_data = 14;</code>
+     * <code>optional .RogueDialogueEvent event_data = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -156,7 +156,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueDialogueEvent event_data = 14;</code>
+     * <code>optional .RogueDialogueEvent event_data = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -170,7 +170,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>optional .RogueDialogueEvent event_data = 14;</code>
+     * <code>optional .RogueDialogueEvent event_data = 8;</code>
      * @param value the eventData to set
      * @return this
      */
@@ -182,7 +182,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>repeated .DialogueResult dialogue_result = 6;</code>
+     * <code>repeated .DialogueResult dialogue_result = 1;</code>
      * @return whether the dialogueResult field is set
      */
     public boolean hasDialogueResult() {
@@ -190,7 +190,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>repeated .DialogueResult dialogue_result = 6;</code>
+     * <code>repeated .DialogueResult dialogue_result = 1;</code>
      * @return this
      */
     public SelectRogueDialogueEventScRsp clearDialogueResult() {
@@ -200,7 +200,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>repeated .DialogueResult dialogue_result = 6;</code>
+     * <code>repeated .DialogueResult dialogue_result = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -214,7 +214,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>repeated .DialogueResult dialogue_result = 6;</code>
+     * <code>repeated .DialogueResult dialogue_result = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -228,7 +228,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>repeated .DialogueResult dialogue_result = 6;</code>
+     * <code>repeated .DialogueResult dialogue_result = 1;</code>
      * @param value the dialogueResult to add
      * @return this
      */
@@ -240,7 +240,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     }
 
     /**
-     * <code>repeated .DialogueResult dialogue_result = 6;</code>
+     * <code>repeated .DialogueResult dialogue_result = 1;</code>
      * @param values the dialogueResult to add
      * @return this
      */
@@ -330,7 +330,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(dialogueEventId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -338,12 +338,12 @@ public final class SelectRogueDialogueEventScRspOuterClass {
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 114);
+        output.writeRawByte((byte) 66);
         output.writeMessageNoTag(eventData);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         for (int i = 0; i < dialogueResult.length(); i++) {
-          output.writeRawByte((byte) 50);
+          output.writeRawByte((byte) 10);
           output.writeMessageNoTag(dialogueResult.get(i));
         }
       }
@@ -374,7 +374,7 @@ public final class SelectRogueDialogueEventScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 40: {
             // dialogueEventId
             dialogueEventId = input.readUInt32();
             bitField0_ |= 0x00000001;
@@ -388,20 +388,20 @@ public final class SelectRogueDialogueEventScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 114) {
+            if (tag != 66) {
               break;
             }
           }
-          case 114: {
+          case 66: {
             // eventData
             input.readMessage(eventData);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 10) {
               break;
             }
           }
-          case 50: {
+          case 10: {
             // dialogueResult
             tag = input.readRepeatedMessage(dialogueResult, tag);
             bitField0_ |= 0x00000008;

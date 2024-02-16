@@ -19,12 +19,12 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 dialogue_event_id = 3;</code>
+     * <code>optional uint32 dialogue_event_id = 1;</code>
      */
     private int dialogueEventId;
 
     /**
-     * <code>optional uint32 entity_id = 6;</code>
+     * <code>optional uint32 entity_id = 8;</code>
      */
     private int entityId;
 
@@ -39,7 +39,7 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 dialogue_event_id = 3;</code>
+     * <code>optional uint32 dialogue_event_id = 1;</code>
      * @return whether the dialogueEventId field is set
      */
     public boolean hasDialogueEventId() {
@@ -47,7 +47,7 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 dialogue_event_id = 3;</code>
+     * <code>optional uint32 dialogue_event_id = 1;</code>
      * @return this
      */
     public SelectRogueDialogueEventCsReq clearDialogueEventId() {
@@ -57,7 +57,7 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 dialogue_event_id = 3;</code>
+     * <code>optional uint32 dialogue_event_id = 1;</code>
      * @return the dialogueEventId
      */
     public int getDialogueEventId() {
@@ -65,7 +65,7 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 dialogue_event_id = 3;</code>
+     * <code>optional uint32 dialogue_event_id = 1;</code>
      * @param value the dialogueEventId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 6;</code>
+     * <code>optional uint32 entity_id = 8;</code>
      * @return whether the entityId field is set
      */
     public boolean hasEntityId() {
@@ -84,7 +84,7 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 6;</code>
+     * <code>optional uint32 entity_id = 8;</code>
      * @return this
      */
     public SelectRogueDialogueEventCsReq clearEntityId() {
@@ -94,7 +94,7 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 6;</code>
+     * <code>optional uint32 entity_id = 8;</code>
      * @return the entityId
      */
     public int getEntityId() {
@@ -102,7 +102,7 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 6;</code>
+     * <code>optional uint32 entity_id = 8;</code>
      * @param value the entityId to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(dialogueEventId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(entityId);
       }
     }
@@ -205,16 +205,16 @@ public final class SelectRogueDialogueEventCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 8: {
             // dialogueEventId
             dialogueEventId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 64) {
               break;
             }
           }
-          case 48: {
+          case 64: {
             // entityId
             entityId = input.readUInt32();
             bitField0_ |= 0x00000002;

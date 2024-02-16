@@ -19,7 +19,7 @@ public final class RogueActionResultOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .RogueBuffSource source = 3;</code>
+     * <code>optional .RogueBuffSource source = 7;</code>
      */
     private int source;
 
@@ -39,7 +39,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuffSource source = 3;</code>
+     * <code>optional .RogueBuffSource source = 7;</code>
      * @return whether the source field is set
      */
     public boolean hasSource() {
@@ -47,7 +47,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuffSource source = 3;</code>
+     * <code>optional .RogueBuffSource source = 7;</code>
      * @return this
      */
     public RogueActionResult clearSource() {
@@ -57,7 +57,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuffSource source = 3;</code>
+     * <code>optional .RogueBuffSource source = 7;</code>
      * @return the source
      */
     public RogueBuffSourceOuterClass.RogueBuffSource getSource() {
@@ -90,7 +90,7 @@ public final class RogueActionResultOuterClass {
     }
 
     /**
-     * <code>optional .RogueBuffSource source = 3;</code>
+     * <code>optional .RogueBuffSource source = 7;</code>
      * @param value the source to set
      * @return this
      */
@@ -224,7 +224,7 @@ public final class RogueActionResultOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 56);
         output.writeEnumNoTag(source);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -252,7 +252,7 @@ public final class RogueActionResultOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 56: {
             // source
             final int value = input.readInt32();
             if (RogueBuffSourceOuterClass.RogueBuffSource.forNumber(value) != null) {

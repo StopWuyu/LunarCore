@@ -130,14 +130,14 @@ public class RogueBuffSelectMenu {
     
     public RogueCommonBuffSelectInfo toProto() {
         var proto = RogueCommonBuffSelectInfo.newInstance()
-                .setSelectBuffSourceHint(this.getHint())
+                .setSourceHintId(this.getHint())
                 .setSourceCurCount(1)
                 .setSourceTotalCount(1);
         
         if (this.getMaxRerolls() > 0) {
             proto.setCanRoll(true);
-            proto.setRollBuffTimes(this.getRerolls());
-            proto.setRollBuffMaxTimes(this.getMaxRerolls());
+            proto.setRollBuffCount(this.getRerolls());
+            proto.setRollBuffMaxCount(this.getMaxRerolls());
         }
         
         for (var buff : this.getBuffs()) {
@@ -146,7 +146,7 @@ public class RogueBuffSelectMenu {
         }
         
         // Create item list for reroll cost
-        proto.setRollBuffsCost(ItemCostList.newInstance()
+        proto.setRollBuffCostData(ItemCostList.newInstance()
             .addItemList(ItemCost.newInstance()
                 .setPileItem(PileItem.newInstance()
                     .setItemId(31)

@@ -19,7 +19,7 @@ public final class RogueRoomOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 site_id = 12;</code>
+     * <code>optional uint32 site_id = 3;</code>
      */
     private int siteId;
 
@@ -28,7 +28,7 @@ public final class RogueRoomOuterClass {
      * uint32 BNKNFOGGPMG = 6;
      * </pre>
      *
-     * <code>optional uint32 room_id = 15;</code>
+     * <code>optional uint32 room_id = 4;</code>
      */
     private int roomId;
 
@@ -37,7 +37,7 @@ public final class RogueRoomOuterClass {
      * IOLBGHALAHK MHIHFPAFLDO = 8;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 13;</code>
+     * <code>optional .RogueRoomStatus room_status = 9;</code>
      */
     private int roomStatus;
 
@@ -52,7 +52,7 @@ public final class RogueRoomOuterClass {
     }
 
     /**
-     * <code>optional uint32 site_id = 12;</code>
+     * <code>optional uint32 site_id = 3;</code>
      * @return whether the siteId field is set
      */
     public boolean hasSiteId() {
@@ -60,7 +60,7 @@ public final class RogueRoomOuterClass {
     }
 
     /**
-     * <code>optional uint32 site_id = 12;</code>
+     * <code>optional uint32 site_id = 3;</code>
      * @return this
      */
     public RogueRoom clearSiteId() {
@@ -70,7 +70,7 @@ public final class RogueRoomOuterClass {
     }
 
     /**
-     * <code>optional uint32 site_id = 12;</code>
+     * <code>optional uint32 site_id = 3;</code>
      * @return the siteId
      */
     public int getSiteId() {
@@ -78,7 +78,7 @@ public final class RogueRoomOuterClass {
     }
 
     /**
-     * <code>optional uint32 site_id = 12;</code>
+     * <code>optional uint32 site_id = 3;</code>
      * @param value the siteId to set
      * @return this
      */
@@ -93,7 +93,7 @@ public final class RogueRoomOuterClass {
      * uint32 BNKNFOGGPMG = 6;
      * </pre>
      *
-     * <code>optional uint32 room_id = 15;</code>
+     * <code>optional uint32 room_id = 4;</code>
      * @return whether the roomId field is set
      */
     public boolean hasRoomId() {
@@ -105,7 +105,7 @@ public final class RogueRoomOuterClass {
      * uint32 BNKNFOGGPMG = 6;
      * </pre>
      *
-     * <code>optional uint32 room_id = 15;</code>
+     * <code>optional uint32 room_id = 4;</code>
      * @return this
      */
     public RogueRoom clearRoomId() {
@@ -119,7 +119,7 @@ public final class RogueRoomOuterClass {
      * uint32 BNKNFOGGPMG = 6;
      * </pre>
      *
-     * <code>optional uint32 room_id = 15;</code>
+     * <code>optional uint32 room_id = 4;</code>
      * @return the roomId
      */
     public int getRoomId() {
@@ -131,7 +131,7 @@ public final class RogueRoomOuterClass {
      * uint32 BNKNFOGGPMG = 6;
      * </pre>
      *
-     * <code>optional uint32 room_id = 15;</code>
+     * <code>optional uint32 room_id = 4;</code>
      * @param value the roomId to set
      * @return this
      */
@@ -146,7 +146,7 @@ public final class RogueRoomOuterClass {
      * IOLBGHALAHK MHIHFPAFLDO = 8;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 13;</code>
+     * <code>optional .RogueRoomStatus room_status = 9;</code>
      * @return whether the roomStatus field is set
      */
     public boolean hasRoomStatus() {
@@ -158,7 +158,7 @@ public final class RogueRoomOuterClass {
      * IOLBGHALAHK MHIHFPAFLDO = 8;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 13;</code>
+     * <code>optional .RogueRoomStatus room_status = 9;</code>
      * @return this
      */
     public RogueRoom clearRoomStatus() {
@@ -172,7 +172,7 @@ public final class RogueRoomOuterClass {
      * IOLBGHALAHK MHIHFPAFLDO = 8;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 13;</code>
+     * <code>optional .RogueRoomStatus room_status = 9;</code>
      * @return the roomStatus
      */
     public RogueRoomStatusOuterClass.RogueRoomStatus getRoomStatus() {
@@ -209,7 +209,7 @@ public final class RogueRoomOuterClass {
      * IOLBGHALAHK MHIHFPAFLDO = 8;
      * </pre>
      *
-     * <code>optional .RogueRoomStatus room_status = 13;</code>
+     * <code>optional .RogueRoomStatus room_status = 9;</code>
      * @param value the roomStatus to set
      * @return this
      */
@@ -290,15 +290,15 @@ public final class RogueRoomOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(siteId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(roomId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 72);
         output.writeEnumNoTag(roomStatus);
       }
     }
@@ -325,25 +325,25 @@ public final class RogueRoomOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 96: {
+          case 24: {
             // siteId
             siteId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 32) {
               break;
             }
           }
-          case 120: {
+          case 32: {
             // roomId
             roomId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 72) {
               break;
             }
           }
-          case 104: {
+          case 72: {
             // roomStatus
             final int value = input.readInt32();
             if (RogueRoomStatusOuterClass.RogueRoomStatus.forNumber(value) != null) {

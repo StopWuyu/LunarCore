@@ -20,17 +20,17 @@ public final class RogueMiracleInfoDataOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 EGCFBOPLHKJ = 4;</code>
+     * <code>optional uint32 EDDPBJMLIML = 9;</code>
      */
-    private int eGCFBOPLHKJ;
+    private int eDDPBJMLIML;
 
     /**
-     * <code>optional uint32 JPDGMALBBAB = 7;</code>
+     * <code>optional uint32 PDDEOGDILJD = 10;</code>
      */
-    private int jPDGMALBBAB;
+    private int pDDEOGDILJD;
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 1;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 14;</code>
      */
     private final RepeatedMessage<RogueMiracleDataInfoOuterClass.RogueMiracleDataInfo> rogueMiracleList = RepeatedMessage.newEmptyInstance(RogueMiracleDataInfoOuterClass.RogueMiracleDataInfo.getFactory());
 
@@ -45,81 +45,81 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 EGCFBOPLHKJ = 4;</code>
-     * @return whether the eGCFBOPLHKJ field is set
+     * <code>optional uint32 EDDPBJMLIML = 9;</code>
+     * @return whether the eDDPBJMLIML field is set
      */
-    public boolean hasEGCFBOPLHKJ() {
+    public boolean hasEDDPBJMLIML() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 EGCFBOPLHKJ = 4;</code>
+     * <code>optional uint32 EDDPBJMLIML = 9;</code>
      * @return this
      */
-    public RogueMiracleInfoData clearEGCFBOPLHKJ() {
+    public RogueMiracleInfoData clearEDDPBJMLIML() {
       bitField0_ &= ~0x00000001;
-      eGCFBOPLHKJ = 0;
+      eDDPBJMLIML = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 EGCFBOPLHKJ = 4;</code>
-     * @return the eGCFBOPLHKJ
+     * <code>optional uint32 EDDPBJMLIML = 9;</code>
+     * @return the eDDPBJMLIML
      */
-    public int getEGCFBOPLHKJ() {
-      return eGCFBOPLHKJ;
+    public int getEDDPBJMLIML() {
+      return eDDPBJMLIML;
     }
 
     /**
-     * <code>optional uint32 EGCFBOPLHKJ = 4;</code>
-     * @param value the eGCFBOPLHKJ to set
+     * <code>optional uint32 EDDPBJMLIML = 9;</code>
+     * @param value the eDDPBJMLIML to set
      * @return this
      */
-    public RogueMiracleInfoData setEGCFBOPLHKJ(final int value) {
+    public RogueMiracleInfoData setEDDPBJMLIML(final int value) {
       bitField0_ |= 0x00000001;
-      eGCFBOPLHKJ = value;
+      eDDPBJMLIML = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 JPDGMALBBAB = 7;</code>
-     * @return whether the jPDGMALBBAB field is set
+     * <code>optional uint32 PDDEOGDILJD = 10;</code>
+     * @return whether the pDDEOGDILJD field is set
      */
-    public boolean hasJPDGMALBBAB() {
+    public boolean hasPDDEOGDILJD() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 JPDGMALBBAB = 7;</code>
+     * <code>optional uint32 PDDEOGDILJD = 10;</code>
      * @return this
      */
-    public RogueMiracleInfoData clearJPDGMALBBAB() {
+    public RogueMiracleInfoData clearPDDEOGDILJD() {
       bitField0_ &= ~0x00000002;
-      jPDGMALBBAB = 0;
+      pDDEOGDILJD = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 JPDGMALBBAB = 7;</code>
-     * @return the jPDGMALBBAB
+     * <code>optional uint32 PDDEOGDILJD = 10;</code>
+     * @return the pDDEOGDILJD
      */
-    public int getJPDGMALBBAB() {
-      return jPDGMALBBAB;
+    public int getPDDEOGDILJD() {
+      return pDDEOGDILJD;
     }
 
     /**
-     * <code>optional uint32 JPDGMALBBAB = 7;</code>
-     * @param value the jPDGMALBBAB to set
+     * <code>optional uint32 PDDEOGDILJD = 10;</code>
+     * @param value the pDDEOGDILJD to set
      * @return this
      */
-    public RogueMiracleInfoData setJPDGMALBBAB(final int value) {
+    public RogueMiracleInfoData setPDDEOGDILJD(final int value) {
       bitField0_ |= 0x00000002;
-      jPDGMALBBAB = value;
+      pDDEOGDILJD = value;
       return this;
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 1;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 14;</code>
      * @return whether the rogueMiracleList field is set
      */
     public boolean hasRogueMiracleList() {
@@ -127,7 +127,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 1;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 14;</code>
      * @return this
      */
     public RogueMiracleInfoData clearRogueMiracleList() {
@@ -137,7 +137,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 1;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 14;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -152,7 +152,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 1;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 14;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -167,7 +167,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 1;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 14;</code>
      * @param value the rogueMiracleList to add
      * @return this
      */
@@ -179,7 +179,7 @@ public final class RogueMiracleInfoDataOuterClass {
     }
 
     /**
-     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 1;</code>
+     * <code>repeated .RogueMiracleDataInfo rogue_miracle_list = 14;</code>
      * @param values the rogueMiracleList to add
      * @return this
      */
@@ -195,8 +195,8 @@ public final class RogueMiracleInfoDataOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        eGCFBOPLHKJ = other.eGCFBOPLHKJ;
-        jPDGMALBBAB = other.jPDGMALBBAB;
+        eDDPBJMLIML = other.eDDPBJMLIML;
+        pDDEOGDILJD = other.pDDEOGDILJD;
         rogueMiracleList.copyFrom(other.rogueMiracleList);
       }
       return this;
@@ -208,11 +208,11 @@ public final class RogueMiracleInfoDataOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasEGCFBOPLHKJ()) {
-        setEGCFBOPLHKJ(other.eGCFBOPLHKJ);
+      if (other.hasEDDPBJMLIML()) {
+        setEDDPBJMLIML(other.eDDPBJMLIML);
       }
-      if (other.hasJPDGMALBBAB()) {
-        setJPDGMALBBAB(other.jPDGMALBBAB);
+      if (other.hasPDDEOGDILJD()) {
+        setPDDEOGDILJD(other.pDDEOGDILJD);
       }
       if (other.hasRogueMiracleList()) {
         getMutableRogueMiracleList().addAll(other.rogueMiracleList);
@@ -227,8 +227,8 @@ public final class RogueMiracleInfoDataOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      eGCFBOPLHKJ = 0;
-      jPDGMALBBAB = 0;
+      eDDPBJMLIML = 0;
+      pDDEOGDILJD = 0;
       rogueMiracleList.clear();
       return this;
     }
@@ -254,24 +254,24 @@ public final class RogueMiracleInfoDataOuterClass {
       }
       RogueMiracleInfoData other = (RogueMiracleInfoData) o;
       return bitField0_ == other.bitField0_
-        && (!hasEGCFBOPLHKJ() || eGCFBOPLHKJ == other.eGCFBOPLHKJ)
-        && (!hasJPDGMALBBAB() || jPDGMALBBAB == other.jPDGMALBBAB)
+        && (!hasEDDPBJMLIML() || eDDPBJMLIML == other.eDDPBJMLIML)
+        && (!hasPDDEOGDILJD() || pDDEOGDILJD == other.pDDEOGDILJD)
         && (!hasRogueMiracleList() || rogueMiracleList.equals(other.rogueMiracleList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(eGCFBOPLHKJ);
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(eDDPBJMLIML);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(jPDGMALBBAB);
+        output.writeRawByte((byte) 80);
+        output.writeUInt32NoTag(pDDEOGDILJD);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < rogueMiracleList.length(); i++) {
-          output.writeRawByte((byte) 10);
+          output.writeRawByte((byte) 114);
           output.writeMessageNoTag(rogueMiracleList.get(i));
         }
       }
@@ -281,10 +281,10 @@ public final class RogueMiracleInfoDataOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(eGCFBOPLHKJ);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(eDDPBJMLIML);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(jPDGMALBBAB);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(pDDEOGDILJD);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += (1 * rogueMiracleList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(rogueMiracleList);
@@ -299,25 +299,25 @@ public final class RogueMiracleInfoDataOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
-            // eGCFBOPLHKJ
-            eGCFBOPLHKJ = input.readUInt32();
+          case 72: {
+            // eDDPBJMLIML
+            eDDPBJMLIML = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 80) {
               break;
             }
           }
-          case 56: {
-            // jPDGMALBBAB
-            jPDGMALBBAB = input.readUInt32();
+          case 80: {
+            // pDDEOGDILJD
+            pDDEOGDILJD = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 114) {
               break;
             }
           }
-          case 10: {
+          case 114: {
             // rogueMiracleList
             tag = input.readRepeatedMessage(rogueMiracleList, tag);
             bitField0_ |= 0x00000004;
@@ -343,10 +343,10 @@ public final class RogueMiracleInfoDataOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.eGCFBOPLHKJ, eGCFBOPLHKJ);
+        output.writeUInt32(FieldNames.eDDPBJMLIML, eDDPBJMLIML);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.jPDGMALBBAB, jPDGMALBBAB);
+        output.writeUInt32(FieldNames.pDDEOGDILJD, pDDEOGDILJD);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeRepeatedMessage(FieldNames.rogueMiracleList, rogueMiracleList);
@@ -361,10 +361,10 @@ public final class RogueMiracleInfoDataOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1177746393: {
-            if (input.isAtField(FieldNames.eGCFBOPLHKJ)) {
+          case 62151318: {
+            if (input.isAtField(FieldNames.eDDPBJMLIML)) {
               if (!input.trySkipNullValue()) {
-                eGCFBOPLHKJ = input.readUInt32();
+                eDDPBJMLIML = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -372,10 +372,10 @@ public final class RogueMiracleInfoDataOuterClass {
             }
             break;
           }
-          case -282541776: {
-            if (input.isAtField(FieldNames.jPDGMALBBAB)) {
+          case -1662161420: {
+            if (input.isAtField(FieldNames.pDDEOGDILJD)) {
               if (!input.trySkipNullValue()) {
-                jPDGMALBBAB = input.readUInt32();
+                pDDEOGDILJD = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -448,9 +448,9 @@ public final class RogueMiracleInfoDataOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName eGCFBOPLHKJ = FieldName.forField("EGCFBOPLHKJ");
+      static final FieldName eDDPBJMLIML = FieldName.forField("EDDPBJMLIML");
 
-      static final FieldName jPDGMALBBAB = FieldName.forField("JPDGMALBBAB");
+      static final FieldName pDDEOGDILJD = FieldName.forField("PDDEOGDILJD");
 
       static final FieldName rogueMiracleList = FieldName.forField("rogueMiracleList", "rogue_miracle_list");
     }

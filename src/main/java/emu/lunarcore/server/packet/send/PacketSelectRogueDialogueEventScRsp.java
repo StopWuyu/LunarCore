@@ -27,15 +27,15 @@ public class PacketSelectRogueDialogueEventScRsp extends BasePacket {
             .setNpcId(npc.getRogueNpcId())
             .setGameModeType(5)
             .addSelectEventId(dialogueEventId)
-            //.setEventUniqueId(instance.getEventUniqueId())
+            .setUniqueId(instance.getEventUniqueId())
             .addAllRogueDialogueEventParam(params.toArray(RogueDialogueEventParam[]::new));
         
         var l = DialogueResult.newInstance();
         for (var param : params) {
-            l.addBLGIMDCNDHJ(param.getDialogueEventId());
+            l.addAllEventIdResult(param.getDialogueEventId());
         }
         if (nextEventId != 0) {
-            l.addBLGIMDCNDHJ(nextEventId);
+            l.addEventIdResult(nextEventId);
         }
         data.addDialogueResult(l);
         data.setEventData(event);

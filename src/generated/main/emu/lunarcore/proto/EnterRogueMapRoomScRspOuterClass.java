@@ -19,24 +19,24 @@ public final class EnterRogueMapRoomScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 cur_site_id = 2;</code>
-     */
-    private int curSiteId;
-
-    /**
      * <code>optional uint32 retcode = 5;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .LineupInfo lineup = 4;</code>
+     * <code>optional uint32 cur_site_id = 9;</code>
      */
-    private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
+    private int curSiteId;
 
     /**
-     * <code>optional .SceneInfo scene = 7;</code>
+     * <code>optional .SceneInfo scene = 4;</code>
      */
     private final SceneInfoOuterClass.SceneInfo scene = SceneInfoOuterClass.SceneInfo.newInstance();
+
+    /**
+     * <code>optional .LineupInfo lineup = 14;</code>
+     */
+    private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
 
     private EnterRogueMapRoomScRsp() {
     }
@@ -49,48 +49,11 @@ public final class EnterRogueMapRoomScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_site_id = 2;</code>
-     * @return whether the curSiteId field is set
-     */
-    public boolean hasCurSiteId() {
-      return (bitField0_ & 0x00000001) != 0;
-    }
-
-    /**
-     * <code>optional uint32 cur_site_id = 2;</code>
-     * @return this
-     */
-    public EnterRogueMapRoomScRsp clearCurSiteId() {
-      bitField0_ &= ~0x00000001;
-      curSiteId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 cur_site_id = 2;</code>
-     * @return the curSiteId
-     */
-    public int getCurSiteId() {
-      return curSiteId;
-    }
-
-    /**
-     * <code>optional uint32 cur_site_id = 2;</code>
-     * @param value the curSiteId to set
-     * @return this
-     */
-    public EnterRogueMapRoomScRsp setCurSiteId(final int value) {
-      bitField0_ |= 0x00000001;
-      curSiteId = value;
-      return this;
-    }
-
-    /**
      * <code>optional uint32 retcode = 5;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
-      return (bitField0_ & 0x00000002) != 0;
+      return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
@@ -98,7 +61,7 @@ public final class EnterRogueMapRoomScRspOuterClass {
      * @return this
      */
     public EnterRogueMapRoomScRsp clearRetcode() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       retcode = 0;
       return this;
     }
@@ -117,88 +80,68 @@ public final class EnterRogueMapRoomScRspOuterClass {
      * @return this
      */
     public EnterRogueMapRoomScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       retcode = value;
       return this;
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     * @return whether the lineup field is set
+     * <code>optional uint32 cur_site_id = 9;</code>
+     * @return whether the curSiteId field is set
      */
-    public boolean hasLineup() {
+    public boolean hasCurSiteId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 cur_site_id = 9;</code>
+     * @return this
+     */
+    public EnterRogueMapRoomScRsp clearCurSiteId() {
+      bitField0_ &= ~0x00000002;
+      curSiteId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 cur_site_id = 9;</code>
+     * @return the curSiteId
+     */
+    public int getCurSiteId() {
+      return curSiteId;
+    }
+
+    /**
+     * <code>optional uint32 cur_site_id = 9;</code>
+     * @param value the curSiteId to set
+     * @return this
+     */
+    public EnterRogueMapRoomScRsp setCurSiteId(final int value) {
+      bitField0_ |= 0x00000002;
+      curSiteId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional .SceneInfo scene = 4;</code>
+     * @return whether the scene field is set
+     */
+    public boolean hasScene() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     * @return this
-     */
-    public EnterRogueMapRoomScRsp clearLineup() {
-      bitField0_ &= ~0x00000004;
-      lineup.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableLineup()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public LineupInfoOuterClass.LineupInfo getLineup() {
-      return lineup;
-    }
-
-    /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public LineupInfoOuterClass.LineupInfo getMutableLineup() {
-      bitField0_ |= 0x00000004;
-      return lineup;
-    }
-
-    /**
-     * <code>optional .LineupInfo lineup = 4;</code>
-     * @param value the lineup to set
-     * @return this
-     */
-    public EnterRogueMapRoomScRsp setLineup(final LineupInfoOuterClass.LineupInfo value) {
-      bitField0_ |= 0x00000004;
-      lineup.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .SceneInfo scene = 7;</code>
-     * @return whether the scene field is set
-     */
-    public boolean hasScene() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional .SceneInfo scene = 7;</code>
+     * <code>optional .SceneInfo scene = 4;</code>
      * @return this
      */
     public EnterRogueMapRoomScRsp clearScene() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000004;
       scene.clear();
       return this;
     }
 
     /**
-     * <code>optional .SceneInfo scene = 7;</code>
+     * <code>optional .SceneInfo scene = 4;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -212,7 +155,7 @@ public final class EnterRogueMapRoomScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneInfo scene = 7;</code>
+     * <code>optional .SceneInfo scene = 4;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -221,18 +164,75 @@ public final class EnterRogueMapRoomScRspOuterClass {
      * @return internal storage object for modifications
      */
     public SceneInfoOuterClass.SceneInfo getMutableScene() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       return scene;
     }
 
     /**
-     * <code>optional .SceneInfo scene = 7;</code>
+     * <code>optional .SceneInfo scene = 4;</code>
      * @param value the scene to set
      * @return this
      */
     public EnterRogueMapRoomScRsp setScene(final SceneInfoOuterClass.SceneInfo value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       scene.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 14;</code>
+     * @return whether the lineup field is set
+     */
+    public boolean hasLineup() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 14;</code>
+     * @return this
+     */
+    public EnterRogueMapRoomScRsp clearLineup() {
+      bitField0_ &= ~0x00000008;
+      lineup.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 14;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableLineup()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public LineupInfoOuterClass.LineupInfo getLineup() {
+      return lineup;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 14;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public LineupInfoOuterClass.LineupInfo getMutableLineup() {
+      bitField0_ |= 0x00000008;
+      return lineup;
+    }
+
+    /**
+     * <code>optional .LineupInfo lineup = 14;</code>
+     * @param value the lineup to set
+     * @return this
+     */
+    public EnterRogueMapRoomScRsp setLineup(final LineupInfoOuterClass.LineupInfo value) {
+      bitField0_ |= 0x00000008;
+      lineup.copyFrom(value);
       return this;
     }
 
@@ -241,10 +241,10 @@ public final class EnterRogueMapRoomScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        curSiteId = other.curSiteId;
         retcode = other.retcode;
-        lineup.copyFrom(other.lineup);
+        curSiteId = other.curSiteId;
         scene.copyFrom(other.scene);
+        lineup.copyFrom(other.lineup);
       }
       return this;
     }
@@ -255,17 +255,17 @@ public final class EnterRogueMapRoomScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasCurSiteId()) {
-        setCurSiteId(other.curSiteId);
-      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
-      if (other.hasLineup()) {
-        getMutableLineup().mergeFrom(other.lineup);
+      if (other.hasCurSiteId()) {
+        setCurSiteId(other.curSiteId);
       }
       if (other.hasScene()) {
         getMutableScene().mergeFrom(other.scene);
+      }
+      if (other.hasLineup()) {
+        getMutableLineup().mergeFrom(other.lineup);
       }
       return this;
     }
@@ -277,10 +277,10 @@ public final class EnterRogueMapRoomScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      curSiteId = 0;
       retcode = 0;
-      lineup.clear();
+      curSiteId = 0;
       scene.clear();
+      lineup.clear();
       return this;
     }
 
@@ -291,8 +291,8 @@ public final class EnterRogueMapRoomScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      lineup.clearQuick();
       scene.clearQuick();
+      lineup.clearQuick();
       return this;
     }
 
@@ -306,29 +306,29 @@ public final class EnterRogueMapRoomScRspOuterClass {
       }
       EnterRogueMapRoomScRsp other = (EnterRogueMapRoomScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasCurSiteId() || curSiteId == other.curSiteId)
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasLineup() || lineup.equals(other.lineup))
-        && (!hasScene() || scene.equals(other.scene));
+        && (!hasCurSiteId() || curSiteId == other.curSiteId)
+        && (!hasScene() || scene.equals(other.scene))
+        && (!hasLineup() || lineup.equals(other.lineup));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(curSiteId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(retcode);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(curSiteId);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeRawByte((byte) 34);
-        output.writeMessageNoTag(lineup);
+        output.writeMessageNoTag(scene);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 58);
-        output.writeMessageNoTag(scene);
+        output.writeRawByte((byte) 114);
+        output.writeMessageNoTag(lineup);
       }
     }
 
@@ -336,16 +336,16 @@ public final class EnterRogueMapRoomScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(curSiteId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(curSiteId);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(lineup);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(scene);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(scene);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(lineup);
       }
       return size;
     }
@@ -357,18 +357,18 @@ public final class EnterRogueMapRoomScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
-            // curSiteId
-            curSiteId = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 40) {
-              break;
-            }
-          }
           case 40: {
             // retcode
             retcode = input.readUInt32();
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 72) {
+              break;
+            }
+          }
+          case 72: {
+            // curSiteId
+            curSiteId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 34) {
@@ -376,17 +376,17 @@ public final class EnterRogueMapRoomScRspOuterClass {
             }
           }
           case 34: {
-            // lineup
-            input.readMessage(lineup);
+            // scene
+            input.readMessage(scene);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 114) {
               break;
             }
           }
-          case 58: {
-            // scene
-            input.readMessage(scene);
+          case 114: {
+            // lineup
+            input.readMessage(lineup);
             bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 0) {
@@ -411,16 +411,16 @@ public final class EnterRogueMapRoomScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.curSiteId, curSiteId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeUInt32(FieldNames.curSiteId, curSiteId);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeMessage(FieldNames.lineup, lineup);
+        output.writeMessage(FieldNames.scene, scene);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeMessage(FieldNames.scene, scene);
+        output.writeMessage(FieldNames.lineup, lineup);
       }
       output.endObject();
     }
@@ -432,11 +432,10 @@ public final class EnterRogueMapRoomScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -226037470:
-          case 1245078036: {
-            if (input.isAtField(FieldNames.curSiteId)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                curSiteId = input.readUInt32();
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -444,22 +443,12 @@ public final class EnterRogueMapRoomScRspOuterClass {
             }
             break;
           }
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
+          case -226037470:
+          case 1245078036: {
+            if (input.isAtField(FieldNames.curSiteId)) {
               if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
+                curSiteId = input.readUInt32();
                 bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1102671473: {
-            if (input.isAtField(FieldNames.lineup)) {
-              if (!input.trySkipNullValue()) {
-                input.readMessage(lineup);
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -470,6 +459,17 @@ public final class EnterRogueMapRoomScRspOuterClass {
             if (input.isAtField(FieldNames.scene)) {
               if (!input.trySkipNullValue()) {
                 input.readMessage(scene);
+                bitField0_ |= 0x00000004;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -1102671473: {
+            if (input.isAtField(FieldNames.lineup)) {
+              if (!input.trySkipNullValue()) {
+                input.readMessage(lineup);
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -530,13 +530,13 @@ public final class EnterRogueMapRoomScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName curSiteId = FieldName.forField("curSiteId", "cur_site_id");
-
       static final FieldName retcode = FieldName.forField("retcode");
 
-      static final FieldName lineup = FieldName.forField("lineup");
+      static final FieldName curSiteId = FieldName.forField("curSiteId", "cur_site_id");
 
       static final FieldName scene = FieldName.forField("scene");
+
+      static final FieldName lineup = FieldName.forField("lineup");
     }
   }
 }

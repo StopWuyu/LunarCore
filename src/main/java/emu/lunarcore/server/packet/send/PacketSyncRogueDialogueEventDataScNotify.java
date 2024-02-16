@@ -1,6 +1,5 @@
 package emu.lunarcore.server.packet.send;
 
-import emu.lunarcore.LunarCore;
 import emu.lunarcore.proto.RogueDialogueEventOuterClass.RogueDialogueEvent;
 import emu.lunarcore.proto.RogueDialogueEventParamOuterClass.RogueDialogueEventParam;
 import emu.lunarcore.proto.SyncRogueDialogueEventDataScNotifyOuterClass.SyncRogueDialogueEventDataScNotify;
@@ -23,7 +22,7 @@ public class PacketSyncRogueDialogueEventDataScNotify extends BasePacket {
         this(RogueDialogueEvent.newInstance()
             .setGameModeType(5)  // rogue explore
             .setNpcId(rogueNpcId)
-            //.setEventUniqueId(eventId)
+            .setUniqueId(eventId)
             .addAllRogueDialogueEventParam(params.toArray(RogueDialogueEventParam[]::new)));
     }
 }

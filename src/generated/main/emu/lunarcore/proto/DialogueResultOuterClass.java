@@ -30,9 +30,9 @@ public final class DialogueResultOuterClass {
     private final ItemListOuterClass.ItemList itemResult = ItemListOuterClass.ItemList.newInstance();
 
     /**
-     * <code>repeated uint32 BLGIMDCNDHJ = 5;</code>
+     * <code>repeated uint32 event_id_result = 10;</code>
      */
-    private final RepeatedInt bLGIMDCNDHJ = RepeatedInt.newEmptyInstance();
+    private final RepeatedInt eventIdResult = RepeatedInt.newEmptyInstance();
 
     private DialogueResult() {
     }
@@ -139,39 +139,39 @@ public final class DialogueResultOuterClass {
     }
 
     /**
-     * <code>repeated uint32 BLGIMDCNDHJ = 5;</code>
-     * @return whether the bLGIMDCNDHJ field is set
+     * <code>repeated uint32 event_id_result = 10;</code>
+     * @return whether the eventIdResult field is set
      */
-    public boolean hasBLGIMDCNDHJ() {
+    public boolean hasEventIdResult() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>repeated uint32 BLGIMDCNDHJ = 5;</code>
+     * <code>repeated uint32 event_id_result = 10;</code>
      * @return this
      */
-    public DialogueResult clearBLGIMDCNDHJ() {
+    public DialogueResult clearEventIdResult() {
       bitField0_ &= ~0x00000004;
-      bLGIMDCNDHJ.clear();
+      eventIdResult.clear();
       return this;
     }
 
     /**
-     * <code>repeated uint32 BLGIMDCNDHJ = 5;</code>
+     * <code>repeated uint32 event_id_result = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
      *
-     * Use {@link #getMutableBLGIMDCNDHJ()} if you want to modify it.
+     * Use {@link #getMutableEventIdResult()} if you want to modify it.
      *
      * @return internal storage object for reading
      */
-    public RepeatedInt getBLGIMDCNDHJ() {
-      return bLGIMDCNDHJ;
+    public RepeatedInt getEventIdResult() {
+      return eventIdResult;
     }
 
     /**
-     * <code>repeated uint32 BLGIMDCNDHJ = 5;</code>
+     * <code>repeated uint32 event_id_result = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -179,30 +179,30 @@ public final class DialogueResultOuterClass {
      *
      * @return internal storage object for modifications
      */
-    public RepeatedInt getMutableBLGIMDCNDHJ() {
+    public RepeatedInt getMutableEventIdResult() {
       bitField0_ |= 0x00000004;
-      return bLGIMDCNDHJ;
+      return eventIdResult;
     }
 
     /**
-     * <code>repeated uint32 BLGIMDCNDHJ = 5;</code>
-     * @param value the bLGIMDCNDHJ to add
+     * <code>repeated uint32 event_id_result = 10;</code>
+     * @param value the eventIdResult to add
      * @return this
      */
-    public DialogueResult addBLGIMDCNDHJ(final int value) {
+    public DialogueResult addEventIdResult(final int value) {
       bitField0_ |= 0x00000004;
-      bLGIMDCNDHJ.add(value);
+      eventIdResult.add(value);
       return this;
     }
 
     /**
-     * <code>repeated uint32 BLGIMDCNDHJ = 5;</code>
-     * @param values the bLGIMDCNDHJ to add
+     * <code>repeated uint32 event_id_result = 10;</code>
+     * @param values the eventIdResult to add
      * @return this
      */
-    public DialogueResult addAllBLGIMDCNDHJ(final int... values) {
+    public DialogueResult addAllEventIdResult(final int... values) {
       bitField0_ |= 0x00000004;
-      bLGIMDCNDHJ.addAll(values);
+      eventIdResult.addAll(values);
       return this;
     }
 
@@ -213,7 +213,7 @@ public final class DialogueResultOuterClass {
         bitField0_ = other.bitField0_;
         hFHKBMGBJAN = other.hFHKBMGBJAN;
         itemResult.copyFrom(other.itemResult);
-        bLGIMDCNDHJ.copyFrom(other.bLGIMDCNDHJ);
+        eventIdResult.copyFrom(other.eventIdResult);
       }
       return this;
     }
@@ -230,8 +230,8 @@ public final class DialogueResultOuterClass {
       if (other.hasItemResult()) {
         getMutableItemResult().mergeFrom(other.itemResult);
       }
-      if (other.hasBLGIMDCNDHJ()) {
-        getMutableBLGIMDCNDHJ().addAll(other.bLGIMDCNDHJ);
+      if (other.hasEventIdResult()) {
+        getMutableEventIdResult().addAll(other.eventIdResult);
       }
       return this;
     }
@@ -245,7 +245,7 @@ public final class DialogueResultOuterClass {
       bitField0_ = 0;
       hFHKBMGBJAN = 0;
       itemResult.clear();
-      bLGIMDCNDHJ.clear();
+      eventIdResult.clear();
       return this;
     }
 
@@ -257,7 +257,7 @@ public final class DialogueResultOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       itemResult.clearQuick();
-      bLGIMDCNDHJ.clear();
+      eventIdResult.clear();
       return this;
     }
 
@@ -273,7 +273,7 @@ public final class DialogueResultOuterClass {
       return bitField0_ == other.bitField0_
         && (!hasHFHKBMGBJAN() || hFHKBMGBJAN == other.hFHKBMGBJAN)
         && (!hasItemResult() || itemResult.equals(other.itemResult))
-        && (!hasBLGIMDCNDHJ() || bLGIMDCNDHJ.equals(other.bLGIMDCNDHJ));
+        && (!hasEventIdResult() || eventIdResult.equals(other.eventIdResult));
     }
 
     @Override
@@ -287,9 +287,9 @@ public final class DialogueResultOuterClass {
         output.writeMessageNoTag(itemResult);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        for (int i = 0; i < bLGIMDCNDHJ.length(); i++) {
-          output.writeRawByte((byte) 40);
-          output.writeUInt32NoTag(bLGIMDCNDHJ.array()[i]);
+        for (int i = 0; i < eventIdResult.length(); i++) {
+          output.writeRawByte((byte) 80);
+          output.writeUInt32NoTag(eventIdResult.array()[i]);
         }
       }
     }
@@ -304,7 +304,7 @@ public final class DialogueResultOuterClass {
         size += 1 + ProtoSink.computeMessageSizeNoTag(itemResult);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += (1 * bLGIMDCNDHJ.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(bLGIMDCNDHJ);
+        size += (1 * eventIdResult.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(eventIdResult);
       }
       return size;
     }
@@ -330,13 +330,13 @@ public final class DialogueResultOuterClass {
             input.readMessage(itemResult);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 42) {
+            if (tag != 82) {
               break;
             }
           }
-          case 42: {
-            // bLGIMDCNDHJ [packed=true]
-            input.readPackedUInt32(bLGIMDCNDHJ, tag);
+          case 82: {
+            // eventIdResult [packed=true]
+            input.readPackedUInt32(eventIdResult, tag);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
@@ -353,9 +353,9 @@ public final class DialogueResultOuterClass {
             tag = input.readTag();
             break;
           }
-          case 40: {
-            // bLGIMDCNDHJ [packed=false]
-            tag = input.readRepeatedUInt32(bLGIMDCNDHJ, tag);
+          case 80: {
+            // eventIdResult [packed=false]
+            tag = input.readRepeatedUInt32(eventIdResult, tag);
             bitField0_ |= 0x00000004;
             break;
           }
@@ -373,7 +373,7 @@ public final class DialogueResultOuterClass {
         output.writeMessage(FieldNames.itemResult, itemResult);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRepeatedUInt32(FieldNames.bLGIMDCNDHJ, bLGIMDCNDHJ);
+        output.writeRepeatedUInt32(FieldNames.eventIdResult, eventIdResult);
       }
       output.endObject();
     }
@@ -408,10 +408,11 @@ public final class DialogueResultOuterClass {
             }
             break;
           }
-          case 135413912: {
-            if (input.isAtField(FieldNames.bLGIMDCNDHJ)) {
+          case 1698094546:
+          case -461813668: {
+            if (input.isAtField(FieldNames.eventIdResult)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(bLGIMDCNDHJ);
+                input.readRepeatedUInt32(eventIdResult);
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -476,7 +477,7 @@ public final class DialogueResultOuterClass {
 
       static final FieldName itemResult = FieldName.forField("itemResult", "item_result");
 
-      static final FieldName bLGIMDCNDHJ = FieldName.forField("BLGIMDCNDHJ");
+      static final FieldName eventIdResult = FieldName.forField("eventIdResult", "event_id_result");
     }
   }
 }

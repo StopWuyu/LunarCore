@@ -19,7 +19,7 @@ public final class SyncRogueStatusScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .RogueStatus rogue_status = 11;</code>
+     * <code>optional .RogueStatus rogue_status = 12;</code>
      */
     private int rogueStatus;
 
@@ -34,7 +34,7 @@ public final class SyncRogueStatusScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueStatus rogue_status = 11;</code>
+     * <code>optional .RogueStatus rogue_status = 12;</code>
      * @return whether the rogueStatus field is set
      */
     public boolean hasRogueStatus() {
@@ -42,7 +42,7 @@ public final class SyncRogueStatusScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueStatus rogue_status = 11;</code>
+     * <code>optional .RogueStatus rogue_status = 12;</code>
      * @return this
      */
     public SyncRogueStatusScNotify clearRogueStatus() {
@@ -52,7 +52,7 @@ public final class SyncRogueStatusScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueStatus rogue_status = 11;</code>
+     * <code>optional .RogueStatus rogue_status = 12;</code>
      * @return the rogueStatus
      */
     public RogueStatusOuterClass.RogueStatus getRogueStatus() {
@@ -85,7 +85,7 @@ public final class SyncRogueStatusScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .RogueStatus rogue_status = 11;</code>
+     * <code>optional .RogueStatus rogue_status = 12;</code>
      * @param value the rogueStatus to set
      * @return this
      */
@@ -154,7 +154,7 @@ public final class SyncRogueStatusScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 96);
         output.writeEnumNoTag(rogueStatus);
       }
     }
@@ -175,7 +175,7 @@ public final class SyncRogueStatusScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 88: {
+          case 96: {
             // rogueStatus
             final int value = input.readInt32();
             if (RogueStatusOuterClass.RogueStatus.forNumber(value) != null) {

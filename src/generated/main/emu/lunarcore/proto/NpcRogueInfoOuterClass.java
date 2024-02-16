@@ -20,15 +20,6 @@ public final class NpcRogueInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     * repeated KELFICDMDDG CEEFGPGODAA = 9;
-     * </pre>
-     *
-     * <code>optional uint32 GENMIFOCMJA = 1;</code>
-     */
-    private int gENMIFOCMJA;
-
-    /**
      * <code>optional uint32 rogue_npc_id = 6;</code>
      */
     private int rogueNpcId;
@@ -39,9 +30,18 @@ public final class NpcRogueInfoOuterClass {
     private int iNJPFALMDHJ;
 
     /**
-     * <code>optional uint32 GBMDBBBMBEJ = 14;</code>
+     * <code>optional uint32 unique_id = 15;</code>
      */
-    private int gBMDBBBMBEJ;
+    private int uniqueId;
+
+    /**
+     * <pre>
+     * repeated KELFICDMDDG CEEFGPGODAA = 9;
+     * </pre>
+     *
+     * <code>optional uint32 GENMIFOCMJA = 21;</code>
+     */
+    private int gENMIFOCMJA;
 
     /**
      * <code>optional bool finish_dialogue = 5;</code>
@@ -59,7 +59,7 @@ public final class NpcRogueInfoOuterClass {
     private boolean aGBFDIIKPKF;
 
     /**
-     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 15;</code>
+     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 1;</code>
      */
     private final RepeatedMessage<HCGOEHLPCMDEntry> hCGOEHLPCMD = RepeatedMessage.newEmptyInstance(HCGOEHLPCMDEntry.getFactory());
 
@@ -74,64 +74,11 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated KELFICDMDDG CEEFGPGODAA = 9;
-     * </pre>
-     *
-     * <code>optional uint32 GENMIFOCMJA = 1;</code>
-     * @return whether the gENMIFOCMJA field is set
-     */
-    public boolean hasGENMIFOCMJA() {
-      return (bitField0_ & 0x00000001) != 0;
-    }
-
-    /**
-     * <pre>
-     * repeated KELFICDMDDG CEEFGPGODAA = 9;
-     * </pre>
-     *
-     * <code>optional uint32 GENMIFOCMJA = 1;</code>
-     * @return this
-     */
-    public NpcRogueInfo clearGENMIFOCMJA() {
-      bitField0_ &= ~0x00000001;
-      gENMIFOCMJA = 0;
-      return this;
-    }
-
-    /**
-     * <pre>
-     * repeated KELFICDMDDG CEEFGPGODAA = 9;
-     * </pre>
-     *
-     * <code>optional uint32 GENMIFOCMJA = 1;</code>
-     * @return the gENMIFOCMJA
-     */
-    public int getGENMIFOCMJA() {
-      return gENMIFOCMJA;
-    }
-
-    /**
-     * <pre>
-     * repeated KELFICDMDDG CEEFGPGODAA = 9;
-     * </pre>
-     *
-     * <code>optional uint32 GENMIFOCMJA = 1;</code>
-     * @param value the gENMIFOCMJA to set
-     * @return this
-     */
-    public NpcRogueInfo setGENMIFOCMJA(final int value) {
-      bitField0_ |= 0x00000001;
-      gENMIFOCMJA = value;
-      return this;
-    }
-
-    /**
      * <code>optional uint32 rogue_npc_id = 6;</code>
      * @return whether the rogueNpcId field is set
      */
     public boolean hasRogueNpcId() {
-      return (bitField0_ & 0x00000002) != 0;
+      return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
@@ -139,7 +86,7 @@ public final class NpcRogueInfoOuterClass {
      * @return this
      */
     public NpcRogueInfo clearRogueNpcId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       rogueNpcId = 0;
       return this;
     }
@@ -158,7 +105,7 @@ public final class NpcRogueInfoOuterClass {
      * @return this
      */
     public NpcRogueInfo setRogueNpcId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       rogueNpcId = value;
       return this;
     }
@@ -168,7 +115,7 @@ public final class NpcRogueInfoOuterClass {
      * @return whether the iNJPFALMDHJ field is set
      */
     public boolean hasINJPFALMDHJ() {
-      return (bitField0_ & 0x00000004) != 0;
+      return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
@@ -176,7 +123,7 @@ public final class NpcRogueInfoOuterClass {
      * @return this
      */
     public NpcRogueInfo clearINJPFALMDHJ() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000002;
       iNJPFALMDHJ = 0;
       return this;
     }
@@ -195,45 +142,98 @@ public final class NpcRogueInfoOuterClass {
      * @return this
      */
     public NpcRogueInfo setINJPFALMDHJ(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       iNJPFALMDHJ = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 GBMDBBBMBEJ = 14;</code>
-     * @return whether the gBMDBBBMBEJ field is set
+     * <code>optional uint32 unique_id = 15;</code>
+     * @return whether the uniqueId field is set
      */
-    public boolean hasGBMDBBBMBEJ() {
-      return (bitField0_ & 0x00000008) != 0;
+    public boolean hasUniqueId() {
+      return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 GBMDBBBMBEJ = 14;</code>
+     * <code>optional uint32 unique_id = 15;</code>
      * @return this
      */
-    public NpcRogueInfo clearGBMDBBBMBEJ() {
-      bitField0_ &= ~0x00000008;
-      gBMDBBBMBEJ = 0;
+    public NpcRogueInfo clearUniqueId() {
+      bitField0_ &= ~0x00000004;
+      uniqueId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 GBMDBBBMBEJ = 14;</code>
-     * @return the gBMDBBBMBEJ
+     * <code>optional uint32 unique_id = 15;</code>
+     * @return the uniqueId
      */
-    public int getGBMDBBBMBEJ() {
-      return gBMDBBBMBEJ;
+    public int getUniqueId() {
+      return uniqueId;
     }
 
     /**
-     * <code>optional uint32 GBMDBBBMBEJ = 14;</code>
-     * @param value the gBMDBBBMBEJ to set
+     * <code>optional uint32 unique_id = 15;</code>
+     * @param value the uniqueId to set
      * @return this
      */
-    public NpcRogueInfo setGBMDBBBMBEJ(final int value) {
+    public NpcRogueInfo setUniqueId(final int value) {
+      bitField0_ |= 0x00000004;
+      uniqueId = value;
+      return this;
+    }
+
+    /**
+     * <pre>
+     * repeated KELFICDMDDG CEEFGPGODAA = 9;
+     * </pre>
+     *
+     * <code>optional uint32 GENMIFOCMJA = 21;</code>
+     * @return whether the gENMIFOCMJA field is set
+     */
+    public boolean hasGENMIFOCMJA() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <pre>
+     * repeated KELFICDMDDG CEEFGPGODAA = 9;
+     * </pre>
+     *
+     * <code>optional uint32 GENMIFOCMJA = 21;</code>
+     * @return this
+     */
+    public NpcRogueInfo clearGENMIFOCMJA() {
+      bitField0_ &= ~0x00000008;
+      gENMIFOCMJA = 0;
+      return this;
+    }
+
+    /**
+     * <pre>
+     * repeated KELFICDMDDG CEEFGPGODAA = 9;
+     * </pre>
+     *
+     * <code>optional uint32 GENMIFOCMJA = 21;</code>
+     * @return the gENMIFOCMJA
+     */
+    public int getGENMIFOCMJA() {
+      return gENMIFOCMJA;
+    }
+
+    /**
+     * <pre>
+     * repeated KELFICDMDDG CEEFGPGODAA = 9;
+     * </pre>
+     *
+     * <code>optional uint32 GENMIFOCMJA = 21;</code>
+     * @param value the gENMIFOCMJA to set
+     * @return this
+     */
+    public NpcRogueInfo setGENMIFOCMJA(final int value) {
       bitField0_ |= 0x00000008;
-      gBMDBBBMBEJ = value;
+      gENMIFOCMJA = value;
       return this;
     }
 
@@ -349,7 +349,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 15;</code>
+     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 1;</code>
      * @return whether the hCGOEHLPCMD field is set
      */
     public boolean hasHCGOEHLPCMD() {
@@ -357,7 +357,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 15;</code>
+     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 1;</code>
      * @return this
      */
     public NpcRogueInfo clearHCGOEHLPCMD() {
@@ -367,7 +367,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 15;</code>
+     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -381,7 +381,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 15;</code>
+     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -395,7 +395,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 15;</code>
+     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 1;</code>
      * @param value the hCGOEHLPCMD to add
      * @return this
      */
@@ -406,7 +406,7 @@ public final class NpcRogueInfoOuterClass {
     }
 
     /**
-     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 15;</code>
+     * <code>repeated .NpcRogueInfo.HCGOEHLPCMDEntry HCGOEHLPCMD = 1;</code>
      * @param values the hCGOEHLPCMD to add
      * @return this
      */
@@ -421,10 +421,10 @@ public final class NpcRogueInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        gENMIFOCMJA = other.gENMIFOCMJA;
         rogueNpcId = other.rogueNpcId;
         iNJPFALMDHJ = other.iNJPFALMDHJ;
-        gBMDBBBMBEJ = other.gBMDBBBMBEJ;
+        uniqueId = other.uniqueId;
+        gENMIFOCMJA = other.gENMIFOCMJA;
         finishDialogue = other.finishDialogue;
         mNINDBMAJKL = other.mNINDBMAJKL;
         aGBFDIIKPKF = other.aGBFDIIKPKF;
@@ -439,17 +439,17 @@ public final class NpcRogueInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasGENMIFOCMJA()) {
-        setGENMIFOCMJA(other.gENMIFOCMJA);
-      }
       if (other.hasRogueNpcId()) {
         setRogueNpcId(other.rogueNpcId);
       }
       if (other.hasINJPFALMDHJ()) {
         setINJPFALMDHJ(other.iNJPFALMDHJ);
       }
-      if (other.hasGBMDBBBMBEJ()) {
-        setGBMDBBBMBEJ(other.gBMDBBBMBEJ);
+      if (other.hasUniqueId()) {
+        setUniqueId(other.uniqueId);
+      }
+      if (other.hasGENMIFOCMJA()) {
+        setGENMIFOCMJA(other.gENMIFOCMJA);
       }
       if (other.hasFinishDialogue()) {
         setFinishDialogue(other.finishDialogue);
@@ -473,10 +473,10 @@ public final class NpcRogueInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      gENMIFOCMJA = 0;
       rogueNpcId = 0;
       iNJPFALMDHJ = 0;
-      gBMDBBBMBEJ = 0;
+      uniqueId = 0;
+      gENMIFOCMJA = 0;
       finishDialogue = false;
       mNINDBMAJKL = false;
       aGBFDIIKPKF = false;
@@ -505,10 +505,10 @@ public final class NpcRogueInfoOuterClass {
       }
       NpcRogueInfo other = (NpcRogueInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasGENMIFOCMJA() || gENMIFOCMJA == other.gENMIFOCMJA)
         && (!hasRogueNpcId() || rogueNpcId == other.rogueNpcId)
         && (!hasINJPFALMDHJ() || iNJPFALMDHJ == other.iNJPFALMDHJ)
-        && (!hasGBMDBBBMBEJ() || gBMDBBBMBEJ == other.gBMDBBBMBEJ)
+        && (!hasUniqueId() || uniqueId == other.uniqueId)
+        && (!hasGENMIFOCMJA() || gENMIFOCMJA == other.gENMIFOCMJA)
         && (!hasFinishDialogue() || finishDialogue == other.finishDialogue)
         && (!hasMNINDBMAJKL() || mNINDBMAJKL == other.mNINDBMAJKL)
         && (!hasAGBFDIIKPKF() || aGBFDIIKPKF == other.aGBFDIIKPKF)
@@ -518,20 +518,20 @@ public final class NpcRogueInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
-        output.writeUInt32NoTag(gENMIFOCMJA);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(rogueNpcId);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(iNJPFALMDHJ);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 120);
+        output.writeUInt32NoTag(uniqueId);
+      }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeUInt32NoTag(gBMDBBBMBEJ);
+        output.writeRawLittleEndian16((short) 424);
+        output.writeUInt32NoTag(gENMIFOCMJA);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         output.writeRawByte((byte) 40);
@@ -547,7 +547,7 @@ public final class NpcRogueInfoOuterClass {
       }
       if ((bitField0_ & 0x00000080) != 0) {
         for (int i = 0; i < hCGOEHLPCMD.length(); i++) {
-          output.writeRawByte((byte) 122);
+          output.writeRawByte((byte) 10);
           output.writeMessageNoTag(hCGOEHLPCMD.get(i));
         }
       }
@@ -557,16 +557,16 @@ public final class NpcRogueInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(gENMIFOCMJA);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(rogueNpcId);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(iNJPFALMDHJ);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(uniqueId);
+      }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(gBMDBBBMBEJ);
+        size += 2 + ProtoSink.computeUInt32SizeNoTag(gENMIFOCMJA);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         size += 2;
@@ -590,19 +590,10 @@ public final class NpcRogueInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
-            // gENMIFOCMJA
-            gENMIFOCMJA = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
           case 48: {
             // rogueNpcId
             rogueNpcId = input.readUInt32();
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 96) {
               break;
@@ -611,15 +602,24 @@ public final class NpcRogueInfoOuterClass {
           case 96: {
             // iNJPFALMDHJ
             iNJPFALMDHJ = input.readUInt32();
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 112) {
+            if (tag != 120) {
               break;
             }
           }
-          case 112: {
-            // gBMDBBBMBEJ
-            gBMDBBBMBEJ = input.readUInt32();
+          case 120: {
+            // uniqueId
+            uniqueId = input.readUInt32();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 168) {
+              break;
+            }
+          }
+          case 168: {
+            // gENMIFOCMJA
+            gENMIFOCMJA = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 40) {
@@ -649,11 +649,11 @@ public final class NpcRogueInfoOuterClass {
             aGBFDIIKPKF = input.readBool();
             bitField0_ |= 0x00000040;
             tag = input.readTag();
-            if (tag != 122) {
+            if (tag != 10) {
               break;
             }
           }
-          case 122: {
+          case 10: {
             // hCGOEHLPCMD
             tag = input.readRepeatedMessage(hCGOEHLPCMD, tag);
             bitField0_ |= 0x00000080;
@@ -679,16 +679,16 @@ public final class NpcRogueInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.gENMIFOCMJA, gENMIFOCMJA);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.rogueNpcId, rogueNpcId);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.iNJPFALMDHJ, iNJPFALMDHJ);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeUInt32(FieldNames.uniqueId, uniqueId);
+      }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.gBMDBBBMBEJ, gBMDBBBMBEJ);
+        output.writeUInt32(FieldNames.gENMIFOCMJA, gENMIFOCMJA);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         output.writeBool(FieldNames.finishDialogue, finishDialogue);
@@ -712,23 +712,12 @@ public final class NpcRogueInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 543187766: {
-            if (input.isAtField(FieldNames.gENMIFOCMJA)) {
-              if (!input.trySkipNullValue()) {
-                gENMIFOCMJA = input.readUInt32();
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case -1140086238:
           case 1751967038: {
             if (input.isAtField(FieldNames.rogueNpcId)) {
               if (!input.trySkipNullValue()) {
                 rogueNpcId = input.readUInt32();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000001;
               }
             } else {
               input.skipUnknownField();
@@ -739,6 +728,18 @@ public final class NpcRogueInfoOuterClass {
             if (input.isAtField(FieldNames.iNJPFALMDHJ)) {
               if (!input.trySkipNullValue()) {
                 iNJPFALMDHJ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -294460212:
+          case -538310583: {
+            if (input.isAtField(FieldNames.uniqueId)) {
+              if (!input.trySkipNullValue()) {
+                uniqueId = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -746,10 +747,10 @@ public final class NpcRogueInfoOuterClass {
             }
             break;
           }
-          case -1904002038: {
-            if (input.isAtField(FieldNames.gBMDBBBMBEJ)) {
+          case 543187766: {
+            if (input.isAtField(FieldNames.gENMIFOCMJA)) {
               if (!input.trySkipNullValue()) {
-                gBMDBBBMBEJ = input.readUInt32();
+                gENMIFOCMJA = input.readUInt32();
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -1179,13 +1180,13 @@ public final class NpcRogueInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName gENMIFOCMJA = FieldName.forField("GENMIFOCMJA");
-
       static final FieldName rogueNpcId = FieldName.forField("rogueNpcId", "rogue_npc_id");
 
       static final FieldName iNJPFALMDHJ = FieldName.forField("INJPFALMDHJ");
 
-      static final FieldName gBMDBBBMBEJ = FieldName.forField("GBMDBBBMBEJ");
+      static final FieldName uniqueId = FieldName.forField("uniqueId", "unique_id");
+
+      static final FieldName gENMIFOCMJA = FieldName.forField("GENMIFOCMJA");
 
       static final FieldName finishDialogue = FieldName.forField("finishDialogue", "finish_dialogue");
 
